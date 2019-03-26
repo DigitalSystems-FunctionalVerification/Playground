@@ -1,0 +1,20 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/darlan/Master/2019_1/Verificação Funcional de Sistemas Digitais/Playground/SQRT
+T_opt
+!s110 1553530736
+VXXWkNhA0iRKZl2M8dgK^o0
+04 7 7 work tb_sqrt tb_sqrt 1
+=1-bc8556fcc443-5c98ff70-8a2ad-25ef
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.6e;65
+R0
