@@ -3,11 +3,17 @@ program test;
     
     import UnmannedRobots::*;
     
-    Robot robot;
-
     initial begin
-        robot = new("robot1", 1);
+        Robot robot;
+        Device_s devices[] = '{ '{0, "Localization"}, 
+                                '{1, "Motion"}};
+        UnmannedAerialVehicle uav;
+
+        robot = new("robot1", devices);
         robot.display();
+        robot.define_mission();
+        uav = new("uav1", devices);
+        uav.define_mission();
     end
     
 endprogram

@@ -11,16 +11,16 @@ package UnmannedRobots;
         
         // Class members
         string      name;
-        int         typ;
-        Device_s    devices[2];
+        Device_s    devices[];  // Dynamic array declaration
+        string      mission;
         
         // Class constructor
-        function new(string name, int typ);
+        function new(string name = "", Device_s devices[] = '{}, string mission = "exist");
         begin
 
             this.name       = name;
-            this.typ        = typ;
-            this.devices    = '{'{1, "task"}, '{2, "taskee"}};
+            this.devices    = devices;
+            this.mission    = mission;
 
         end          
         endfunction
@@ -28,15 +28,34 @@ package UnmannedRobots;
         // Function in class
         function void display();
         begin
-            $write("Robot name: %s \n"                          , this.name                         );
-            $write("Robot type: %d \n"                          , this.typ                          );
-            $write("Robot amount of devices: %d \n"             , $size(this.devices)               );
-            foreach (this.devices[i]) $write("Device %d: %s \n" , devices[i].id, devices[i].taskk   );
+            $write("Robot name: %s \n"                          , this.name                                 );        
+            $write("Robot amount of devices: %d \n"             , $size(this.devices)                       );
+            foreach (this.devices[i]) $write("Device %d: %s \n" , this.devices[i].id, this.devices[i].taskk );
             $display;            
         end
         endfunction
 
+        function void define_mission();
+        begin
+            $write("Robot: %s \n", this.name);
+            $write("My mission is to %s.\n", this.mission);
+            $display;
+        end
+        endfunction
+
     endclass // Robot
+
+    class UnmannedAerialVehicle extends Robot;
+
+        
+
+        function new(string name, Device_s devices[] = '{}, string mission = "fly");
+        begin
+            super.new(name, devices, mission);
+        end
+        endfunction
+
+    endclass
 
 
 
