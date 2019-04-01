@@ -45,11 +45,9 @@ package UnmannedRobots;
 
     endclass // Robot
 
-    class UnmannedAerialVehicle extends Robot;
+    class UnmannedAerialVehicle extends Robot;        
 
-        
-
-        function new(string name, Device_s devices[] = '{}, string mission = "fly");
+        function new(string name, Device_s devices[] = '{}, string mission = "fly through the skies");
         begin
             super.new(name, devices, mission);
         end
@@ -57,6 +55,26 @@ package UnmannedRobots;
 
     endclass
 
+    class UnmannedGroundVehicle extends Robot;        
+
+        function new(string name, Device_s devices[] = '{}, string mission = "explore the ground surface");
+        begin
+            super.new(name, devices, mission);
+        end
+        endfunction
+
+    endclass
+
+
+    class UnmannedMarineVehicle extends Robot;        
+
+        function new(string name, Device_s devices[] = '{}, string mission = "navigate through the oceans");
+        begin
+            super.new(name, devices, mission);
+        end
+        endfunction
+
+    endclass
 
 
 endpackage

@@ -13,6 +13,11 @@ Packet/vehicle/_lib.qdb
 Packet/vehicle/_lib1_0.qdb
 Packet/vehicle/_lib1_0.qpg
 Packet/vehicle/_lib1_0.qtl
+*.qtl
+*.qdb
+*.qpg
+*_info
+*_vmake
 UnmannedRobot/UnmannedRobots/_vmake
 UnmannedRobot/UnmannedRobots/_info
 UnmannedRobot/UnmannedRobots/_lib.qdb
@@ -23,3 +28,6 @@ UnmannedRobot/UnmannedRobots/_lib1_8.qpg
 UnmannedRobot/vsim_stacktrace.vstf
 UnmannedRobot/UnmannedRobots/_lib1_8.qdb
 UnmannedRobot/UnmannedRobots/_lib1_8.qtl
+UnmannedRobot/UnmannedRobots/_lib1_9.qtl
+UnmannedRobot/UnmannedRobots/_lib1_9.qdb
+UnmannedRobot/UnmannedRobots/_lib1_9.qpg
